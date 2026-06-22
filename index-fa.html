@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>Seyed Mansour Mirbehbahani — Technical Resume</title>
+<title>سیدمنصور میربهبهانی — رزومه فنی</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -61,7 +61,7 @@ body{
   font-family:'Vazirmatn','VazirmatnLatin',sans-serif;
   font-size:10.5pt;
   color:var(--ink);
-  direction:ltr;
+  direction:rtl;
 }
 
 .sheet-stack{
@@ -112,9 +112,9 @@ body{
   font-size:7.5pt;
   line-height:1.75;
   color:var(--ink-soft);
-  padding-left:3.8mm;
-  margin-left:1mm;
-  border-left:0.8pt solid var(--paper-line);
+  padding-right:3.8mm;
+  margin-right:1mm;
+  border-right:0.8pt solid var(--paper-line);
   white-space:nowrap;
 }
 .contact-block div{direction:ltr;}
@@ -187,13 +187,13 @@ body{
 /* ---- experience ---- */
 .exp-item{
   position:relative;
-  padding-left:5mm;
+  padding-right:5mm;
   margin-bottom:3.1mm;
 }
 .exp-item::before{
   content:"";
   position:absolute;
-  left:1.4mm;
+  right:1.4mm;
   top:1.6mm;
   width:2mm; height:2mm;
   background:var(--accent);
@@ -203,8 +203,8 @@ body{
 /* page-2 single-block items: no ball, simple indent only */
 .exp-item.exp-single::before{display:none;}
 .exp-item.exp-single{
-  border-left:none;
-  padding-left:3.5mm;
+  border-right:none;
+  padding-right:3.5mm;
 }
 .exp-head{
   display:flex;
@@ -239,20 +239,20 @@ body{
   font-size:7.6pt;
   line-height:1.45;
   color:var(--ink-soft);
-  padding-left:3mm;
+  padding-right:3mm;
   position:relative;
 }
 .exp-projects .pj::before{
   content:"›";
   position:absolute;
-  left:0;
+  right:0;
   top:0;
   color:var(--accent);
   font-weight:800;
 }
 .exp-projects .pj b{color:var(--ink); font-weight:700;}
 
-/* ---- skills/edu 2-col block ---- */
+/* ---- skills/edu 3-col block ---- */
 .three-col-block{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -267,7 +267,7 @@ body{
 .edu-item:last-child{margin-bottom:0;}
 .edu-deg{font-size:7.8pt; font-weight:700; line-height:1.4;}
 .edu-org{font-size:7.1pt; color:var(--ink-soft); margin-top:0.6mm;}
-.edu-date{font-size:6.7pt; color:var(--ink-faint); margin-top:0.3mm; direction:ltr; text-align:left;}
+.edu-date{font-size:6.7pt; color:var(--ink-faint); margin-top:0.3mm; direction:ltr; text-align:right;}
 
 /* ============ PAGE 2 ============ */
 .p2-header{
@@ -284,8 +284,8 @@ body{
   font-size:7.5pt;
   line-height:1.75;
   color:var(--ink-soft);
-  padding-left:3.8mm;
-  border-left:0.8pt solid var(--paper-line);
+  padding-right:3.8mm;
+  border-right:0.8pt solid var(--paper-line);
   white-space:nowrap;
   direction:ltr;
 }
@@ -309,7 +309,7 @@ body{
 /* ---- open source cards ---- */
 .oss-card{
   border:0.7pt solid var(--paper-line);
-  border-left:2.2pt solid var(--accent);
+  border-right:2.2pt solid var(--accent);
   background:rgba(255,255,255,0.4);
   padding:3mm 3.5mm;
   margin-bottom:2.6mm;
@@ -331,7 +331,7 @@ body{
   color:var(--ink-faint);
   margin-top:1.2mm;
   direction:ltr;
-  text-align:left;
+  text-align:right;
 }
 
 a{color:var(--accent-deep); text-decoration:none;}
@@ -353,50 +353,50 @@ a:hover{text-decoration:underline;}
 
   <div class="header">
     <div class="who">
-      <div class="name">Seyed Mansour Mirbehbahani</div>
-      <div class="role">Tech Lead &bull; Software Engineer &bull; Founder of FardaDev</div>
+      <div class="name">سیدمنصور میربهبهانی</div>
+      <div class="role">رهبر فنی  •  مهندس نرم‌افزار  •  بنیان‌گذار توسعه‌دهندگان فردا</div>
     </div>
     <div class="contact-block">
-      <div class="cb-strong">Gorgan, Iran</div>
+      <div class="cb-strong">گرگان، ایران</div>
       <div>seyed.mansour@mirbehbahani.ir</div>
-      <div>github.com/MansourM &middot; fardadev.com</div>
+      <div>github.com/MansourM · fardadev.com</div>
       <div>linkedin.com/in/seyed-mansour-mirbehbahani</div>
       <div>0911-635-3554</div>
     </div>
   </div>
 
   <div class="intro">
-    10+ years of experience designing, developing, and leading software products.
-    I own the full product lifecycle: from idea to execution&mdash;ideation, team building, software architecture, database design, infrastructure, and server management.
+    بیش از ۱۰ سال تجربه در طراحی، توسعه و رهبری محصولات نرم‌افزاری.
+    مسیر محصول را از ایده تا اجرا می‌شناسم: پرورش ایده، تیم‌سازی، معماری نرم‌افزار، طراحی پایگاه داده، زیرساخت، و مدیریت سرور.
   </div>
 
   <div class="focus-row">
     <div class="focus-card">
-      <div class="ft">Ideation</div>
-      <div class="fd">Research and close collaboration with the client to understand needs&mdash;from raw idea to product</div>
+      <div class="ft">پرورش ایده</div>
+      <div class="fd">تحقیق و همکاری نزدیک با مشتری برای درک نیاز — از ایده خام تا محصول</div>
     </div>
     <div class="focus-card">
-      <div class="ft">Software Architecture</div>
-      <div class="fd">Designing stable systems with principled architecture and cohesive data structures</div>
+      <div class="ft">معماری نرم‌افزار</div>
+      <div class="fd">طراحی سامانه‌های پایدار با معماری اصولی و ساختار داده منسجم</div>
     </div>
     <div class="focus-card">
-      <div class="ft">Infrastructure &amp; DevOps</div>
-      <div class="fd">Full cycle: Docker, CI/CD, Ansible, and bare-metal server management</div>
+      <div class="ft">زیرساخت و DevOps</div>
+      <div class="fd">چرخه کامل: Docker، CI/CD، Ansible و مدیریت سرور اختصاصی خام</div>
     </div>
     <div class="focus-card">
-      <div class="ft">Tech Leadership</div>
-      <div class="fd">Team management, architectural decisions, and code quality</div>
+      <div class="ft">رهبری فنی</div>
+      <div class="fd">مدیریت تیم، تصمیم‌های معماری و کیفیت کد</div>
     </div>
   </div>
 
-  <!-- ======= SKILLS + EDUCATION ======= -->
+  <!-- ======= SKILLS + EDUCATION — single 3-col grid ======= -->
   <div class="three-col-block">
 
     <!-- Col 1: Technical skills -->
     <div>
       <div class="section-title">
         <div class="tick"></div>
-        Technical Skills
+        مهارت‌های فنی
       </div>
       <div class="tools-wrap" style="margin-bottom:0;">
         <span class="tool-tag">PHP / Laravel</span>
@@ -413,26 +413,26 @@ a:hover{text-decoration:underline;}
     <div>
       <div class="section-title">
         <div class="tick"></div>
-        Education
+        سوابق تحصیلی
       </div>
       <div class="edu-item">
-        <div class="edu-deg">M.Sc. Computer Engineering&mdash;Software</div>
-        <div class="edu-org">Payame Noor University (Tehran Shomal)</div>
-        <div class="edu-date">2018 &mdash; 2021</div>
+        <div class="edu-deg">کارشناسی ارشد مهندسی کامپیوتر-نرم‌افزار</div>
+        <div class="edu-org">دانشگاه پیام نور (تهران شمال)</div>
+        <div class="edu-date">1397 — 1400</div>
       </div>
       <div class="edu-item">
-        <div class="edu-deg">B.Sc. Software Engineering</div>
-        <div class="edu-org">K. N. Toosi University of Technology</div>
-        <div class="edu-date">2013 &mdash; 2018</div>
+        <div class="edu-deg">کارشناسی مهندسی نرم‌افزار</div>
+        <div class="edu-org">دانشگاه خواجه‌نصیرالدین طوسی</div>
+        <div class="edu-date">1392 — 1397</div>
       </div>
-    </div>
-
   </div>
-  <!-- ======= END skills+edu ======= -->
+
+</div>
+  <!-- ======= END 3-col block ======= -->
 
   <div class="section-title">
     <div class="tick"></div>
-    Professional Experience
+    سوابق حرفه‌ای
     <div class="rule"></div>
     <div class="eyebrow">EXPERIENCE</div>
   </div>
@@ -440,67 +440,67 @@ a:hover{text-decoration:underline;}
   <div class="exp-item">
     <div class="exp-head">
       <div class="exp-titles">
-        <span class="exp-role">Founder &amp; CEO</span>
-        <span class="exp-org">&mdash; FardaDev</span>
+        <span class="exp-role">بنیان‌گذار و مدیرعامل</span>
+        <span class="exp-org">— توسعه‌دهندگان فردا (FardaDev)</span>
       </div>
-      <div class="exp-date">2023 &mdash; Present</div>
+      <div class="exp-date">1402 — اکنون</div>
     </div>
     <div class="exp-desc">
-      A software agency from idea to execution&mdash;technical leadership of a development team building multiple enterprise products simultaneously. Personally set up the entire infrastructure from scratch to production.
+      آژانس نرم‌افزاری از ایده تا اجرا — رهبری فنی تیم توسعه در ساخت هم‌زمان چند محصول سازمانی. زیرساخت مجموعه را شخصاً از صفر تا تولید راه‌اندازی کرده‌ام.
     </div>
     <div class="exp-projects">
-      <div class="pj"><b>Admin Dashboard</b> &mdash; The admin team dealt with hundreds of accounts, emails, and two-step verification codes with zero structure&mdash;no one knew who had access to what, when passwords changed, who last accessed which account, or who had access on a given day. I built a centralized dashboard that tracks all of this with full auditability. Incoming emails are routed from the mail service into the database and automatically classified via regex into categories (notification, verification code, transaction, etc.). Every section has role-based, per-user access control, and all activity is fully auditable.</div>
-      <div class="pj"><b>Andro.law</b> &mdash; Over 2,000 clients each needed contracts with varying terms and values&mdash;manual drafting and tracking at this scale was impossible. I designed a system where the client enters information, an official inquiry runs, an admin builds a template, and with a single click a Word/PDF document is generated with all values filled in&mdash;along with automated SMS delivery and digital signature in the dashboard.</div>
-      <div class="pj"><b>Support Platform</b> &mdash; Admins were providing support directly through personal or work Telegram accounts&mdash;there was zero visibility into who said what to which client, and a single admin had to juggle Telegram, tickets, and several other places simultaneously. I built a platform that centralizes all channels into a single interface: live chat via a Telegram bot and a web panel with intelligent ticket routing. Admins now have one interface to manage, every message back and forth is visible and auditable, and since everything is logged, admin performance reporting is now available.</div>
-      <div class="pj"><b>Dedicated Infrastructure</b> &mdash; For greater control and lower cost, I built the entire infrastructure from scratch on Hetzner bare-metal with Proxmox: installing Proxmox on raw servers, building Ubuntu and Windows templates with Cloud-Init, security hardening, firewall and network configuration. Today it serves 70+ VMs with 512GB RAM, 8TB storage, and 70+ dedicated IPs.</div>
+      <div class="pj"><b>سامانه ادمین</b> — تیم ادمین‌ها با صدها حساب کاربری، ایمیل و کد دومرحله‌ای سروکار داشتند بدون هیچ نظمی — معلوم نبود چه کسی به چه چیزی دسترسی دارد، رمزها چه زمانی تغییر کرده، آخرین دسترسی هر حساب توسط چه کسی بوده، یا فلان روز چه کسی دسترسی داشته. داشبوردی ساختم که همه اینها را متمرکز و قابل رهگیری می‌کند. ایمیل‌های ورودی از سرویس ایمیل به دیتابیس هدایت می‌شوند و با پردازش مبتنی بر regex خودکار به دسته‌های مختلف (اعلان، کد احراز، تراکنش و...) تفکیک می‌گردند. تمام بخش‌ها دارای سطح دسترسی نقش‌محور و مبتنی بر کاربر است و همه فعالیت‌ها کاملاً قابل ممیزی می‌باشد.</div>
+      <div class="pj"><b>Andro.law</b> — بیش از ۲۰۰۰ مشتری نیازمند قرارداد با شرایط و مقادیر متفاوت — تهیه و پیگیری دستی این حجم غیرممکن بود. سامانه‌ای طراحی کردم که کاربر اطلاعات را وارد می‌کند، استعلام رسمی انجام می‌شود، ادمین قالب می‌سازد و با یک کلیک فایل Word/PDF با تمام مقادیر پر می‌شود — همراه با ارسال خودکار SMS و امضای دیجیتال در داشبورد.</div>
+      <div class="pj"><b>سامانه پشتیبان</b> — ادمین‌ها برای پشتیبانی مستقیماً از تلگرام شخصی یا کاری استفاده می‌کردند — هیچ دیدی وجود نداشت که چه کسی به چه مشتری چه گفته، و یک ادمین مجبور بود هم‌زمان تلگرام، تیکت و چند جای دیگر را چک کند. پلتفرمی ساختم که همه کانال‌ها را در یک رابط واحد متمرکز می‌کند: گفتگوی زنده از طریق ربات تلگرام و پنل وب با مسیریابی هوشمند تیکت. ادمین فقط یک رابط دارد، تمام پیام‌های رفت‌وبرگشتی قابل مشاهده و ممیزی است، و حالا که همه چیز ثبت می‌شود، گزارش‌گیری عملکرد ادمین‌ها نیز فراهم شده است.</div>
+      <div class="pj"><b>زیرساخت اختصاصی</b> — برای کنترل بیشتر و هزینه کمتر، کل زیرساخت را روی سرور فیزیکی Hetzner با Proxmox از صفر راه‌اندازی کردم: نصب Proxmox روی سرور خام، ساخت قالب‌های Ubuntu و Windows با Cloud-Init، سخت‌سازی امنیتی، پیکربندی فایروال و شبکه. امروز ۷۰+ ماشین مجازی سرویس می‌دهد با ۵۱۲ گیگ رم، ۸ ترابایت حافظه و ۷۰+ آی‌پی اختصاصی.</div>
     </div>
   </div>
 
   <div class="exp-item">
     <div class="exp-head">
       <div class="exp-titles">
-        <span class="exp-role">Senior Developer</span>
-        <span class="exp-org">&mdash; Mazraeh Nemouneh Gorgan Co.</span>
+        <span class="exp-role">توسعه‌دهنده ارشد</span>
+        <span class="exp-org">— شرکت سهامی مزرعه نمونه گرگان</span>
       </div>
-      <div class="exp-date">2021 &mdash; 2023</div>
+      <div class="exp-date">1400 — 1402</div>
     </div>
     <div class="exp-desc">
-      Applied my skills during military service&mdash;designed and built farm management software from the ground up.
+      معرفی مهارت‌هایم در دوران خدمت — نرم‌افزارهای مدیریت فارم را از صفر طراحی و پیاده‌سازی کردم.
     </div>
     <div class="exp-projects">
-      <div class="pj"><b>Shift Planner</b> &mdash; Multiple stations with dozens of guards&mdash;personnel data, payroll, leave, and daily scheduling were all done manually. I built a system where you define guards and shift types, and the system automatically arranges the weekly schedule. The final roster sheet is ready to print with a single click, and scheduling accuracy improved dramatically. (Still in use)</div>
+      <div class="pj"><b>سامانه سرشیفت</b> — چندین ایستگاه با ده‌ها نگهبان — ثبت اطلاعات، حقوق، مرخصی و برنامه‌ریزی روزانه همه دستی انجام می‌شد. سامانه‌ای ساختم که نگهبان تعریف می‌کنید، نوع شیفت وارد می‌شود، و سیستم خودکار برنامه هفتگی را می‌چیند. لوحه نهایی با یک کلیک آماده چاپ است و دقت برنامه‌ریزی به شدت بالا رفت. (هنوز در حال استفاده)</div>
     </div>
   </div>
 
   <div class="exp-item">
     <div class="exp-head">
       <div class="exp-titles">
-        <span class="exp-role">Senior Developer</span>
-        <span class="exp-org">&mdash; Sheena Advanced Tech Co.</span>
+        <span class="exp-role">توسعه‌دهنده ارشد</span>
+        <span class="exp-org">— شرکت توسعه فناوری پیشرفته شینا</span>
       </div>
-      <div class="exp-date">2017 &mdash; 2021</div>
+      <div class="exp-date">1396 — 1400</div>
     </div>
     <div class="exp-desc">
-      Designed and developed digital health products within a small team.
+      طراحی و توسعه محصولات سلامت دیجیتال در یک تیم کوچک.
     </div>
     <div class="exp-projects">
-      <div class="pj"><b>Cipsa Platform</b> &mdash; Telemedicine website with appointment scheduling, payment, and real-time notifications</div>
-      <div class="pj"><b>Monks App</b> &mdash; Android health kiosks capturing vital signs and transmitting data to physicians</div>
+      <div class="pj"><b>سامانه سیپسا</b> — وبسایت خدمات پزشکی از راه دور با نوبت‌دهی، پرداخت و اعلان بلادرنگ</div>
+      <div class="pj"><b>اپلیکیشن مانکس</b> — ایستگاه‌های سلامت اندروید؛ ثبت داده‌های حیاتی و ارسال به پزشک</div>
     </div>
   </div>
 
   <div class="exp-item">
     <div class="exp-head">
       <div class="exp-titles">
-        <span class="exp-role">Early Career</span>
-        <span class="exp-org">&mdash; Web, SEO, and Android Development</span>
+        <span class="exp-role">دوران آغازین</span>
+        <span class="exp-org">— وب، سئو و توسعه اندروید</span>
       </div>
-      <div class="exp-date">2013 &mdash; 2017</div>
+      <div class="exp-date">1392 — 1396</div>
     </div>
     <div class="exp-projects">
-      <div class="pj"><b>ReleFilm</b> &mdash; Specialized SEO focused on content originality and longevity&mdash;most posts reached Google&rsquo;s first page</div>
-      <div class="pj"><b>KNTU App</b> &mdash; Graphic and visual design for a university introduction app</div>
-      <div class="pj"><b>FollowerPlus Redesign</b> &mdash; A project with amateur code, constant bugs, frequent DB timeouts, and hacker intrusions was referred to me. In the first week, I put in ~80 hours fixing the core issues&mdash;first rewrote the backend without service interruption, then took over the app and continued development and maintenance for 3 years. (100K users)</div>
+      <div class="pj"><b>رله فیلم</b> — سئوی تخصصی با تمرکز بر اصالت و عمر محتوا — اکثر پست‌ها به صفحه اول گوگل رسیدند</div>
+      <div class="pj"><b>اپلیکیشن دانشگاه خواجه‌نصیر</b> — طراحی گرافیکی و بصری اپلیکیشن معرفی دانشگاه</div>
+      <div class="pj"><b>بازطراحی فالوئرپلاس</b> — پروژه با کد آماتور و پر از باگ، DB با timeout مکرر، و نفوذ هکرها به من ارجاع شد. در هفته اول حدود ۸۰ ساعت روی رفع مشکلات مرکزی وقت گذاشتم — ابتدا backend را بدون قطع سرویس بازنویسی کردم، بعد اپلیکیشن را دست گرفتم و ۳ سال توسعه و نگهداری ادامه دادم. (۱۰۰ هزار کاربر)</div>
     </div>
   </div>
 
@@ -511,46 +511,46 @@ a:hover{text-decoration:underline;}
 
   <div class="p2-header">
     <div>
-      <div class="p2-name">Seyed Mansour Mirbehbahani</div>
+      <div class="p2-name">سیدمنصور میربهبهانی</div>
     </div>
     <div class="p2-contact">
       <div>seyed.mansour@mirbehbahani.ir</div>
-      <div>github.com/MansourM &middot; fardadev.com</div>
+      <div>github.com/MansourM · fardadev.com</div>
     </div>
   </div>
 
   <div class="section-title">
     <div class="tick"></div>
-    Open Source
+    اپن‌سورس
     <div class="rule"></div>
     <div class="eyebrow">OPEN SOURCE</div>
   </div>
-  <div class="exp-item exp-single" style="margin-bottom:3.8mm; padding-left:0;">
+  <div class="exp-item exp-single" style="margin-bottom:3.8mm; padding-right:0;">
     <div class="oss-card">
       <div class="oss-name"><a href="https://github.com/MansourM/ez-docker-for-laravel">ez-docker-for-laravel</a></div>
-      <div class="oss-desc">Free alternative to paid services like Laravel Forge; full Nginx and MySQL management, built-in CI/CD, support for multiple environments with dedicated Dockerfiles, and a CLI that automates most configuration by reading your .env file.</div>
+      <div class="oss-desc">جایگزین رایگان سرویس‌های پولی مثل Laravel Forge؛ مدیریت کامل Nginx و MySQL، CI/CD داخلی، پشتیبانی از محیط‌های مختلف با Dockerfile اختصاصی، و CLI که با گرفتن .env اکثر تنظیمات را خودکار انجام می‌دهد.</div>
       <div class="oss-link">github.com/MansourM/ez-docker-for-laravel</div>
     </div>
     <div class="oss-card">
       <div class="oss-name"><a href="https://github.com/MansourM/telegram-objects-php">telegram-objects-php</a></div>
-      <div class="oss-desc">Framework-agnostic typed library for the Telegram Bot API. Unlike common libraries full of magic methods and unstructured arrays, this project uses typed DTOs with full validation, enabling static analysis and IDE intellisense.</div>
+      <div class="oss-desc">کتابخانه مستقل از فریم‌ورک برای Telegram Bot API. برخلاف کتابخانه‌های رایج که پر از magic method و آرایه‌های بدون ساختار هستند، این پروژه با DTOهای typed و اعتبارسنجی کامل، تحلیل ایستا و intellisense در IDE را ممکن می‌کند.</div>
       <div class="oss-link">github.com/MansourM/telegram-objects-php</div>
     </div>
     <div class="oss-card">
       <div class="oss-name"><a href="https://github.com/MansourM/saman-banking-api-php">saman-banking-api-php</a></div>
-      <div class="oss-desc">Laravel package with DTO-based architecture and a strong API for the Saman Bank payment gateway; designed with emphasis on type-safety and eliminating magic.</div>
+      <div class="oss-desc">پکیج Laravel با معماری DTO و API قوی برای درگاه بانک سامان؛ با تأکید بر امنیت نوع و حذف magic طراحی شده.</div>
       <div class="oss-link">github.com/MansourM/saman-banking-api-php</div>
     </div>
   </div>
 
   <div class="section-title">
     <div class="tick"></div>
-    Tools &amp; Other Languages
+    ابزارها و زبان‌های دیگر
     <div class="rule"></div>
     <div class="eyebrow">TOOLS</div>
   </div>
   <div class="tools-wrap" style="margin-bottom:3.8mm;">
-    <span class="tool-tag" style="border-color:var(--accent); background:var(--accent-tint);">English — Professional Fluency</span>
+    <span class="tool-tag" style="border-color:var(--accent); background:var(--accent-tint);">English — تسلط حرفه‌ای</span>
     <span class="tool-tag">Bash / Shell</span>
     <span class="tool-tag">TypeScript</span>
     <span class="tool-tag">React</span>
