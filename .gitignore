@@ -1,3 +1,9 @@
 .idea
 /Resume-Mansour.docx
 /~$sume-Mansour.docx
+
+# Scratch workspace — never commit
+_repos-cache/
+
+# Windows artifacts
+*:Zone.Identifier

@@ -1,11 +1,674 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en" style="width:100%; height:100%;">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>Seyed Mansour's Resume</title>
+<meta charset="UTF-8">
+<title>سیدمنصور میربهبهانی — رزومه فنی</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ── Fonts ── */
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('assets/fonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('assets/fonts/Vazirmatn-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('assets/fonts/Vazirmatn-SemiBold.woff2') format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('assets/fonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('assets/fonts/Vazirmatn-ExtraBold.woff2') format('woff2');
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('assets/fonts/Vazirmatn-Light.woff2') format('woff2');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+
+:root{
+  --paper:#F5F6F3;
+  --paper-line:#D9DBD4;
+  --paper-line-soft:#E6E7E2;
+  --ink:#161A22;
+  --ink-soft:#525B68;
+  --ink-faint:#8B93A0;
+  --accent:#0C7C73;
+  --accent-deep:#075C56;
+  --accent-tint:#E3F1EF;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+
+html,body{
+  background:#3a3d3f;
+}
+
+body{
+  font-family:'Vazirmatn','VazirmatnLatin',sans-serif;
+  font-size:10.5pt;
+  color:var(--ink);
+  direction:rtl;
+}
+
+.sheet-stack{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8mm;
+  padding:8mm 0;
+}
+
+.page{
+  width:210mm;
+  height:297mm;
+  background:var(--paper);
+  position:relative;
+  padding:13mm 14mm 11mm 14mm;
+  box-shadow:0 2px 18px rgba(0,0,0,0.28);
+  background-image: radial-gradient(circle, rgba(22,26,34,0.07) 0.55px, transparent 0.55px);
+  background-size: 7mm 7mm;
+  display:flex;
+  flex-direction:column;
+}
+
+/* ============ HEADER / TITLE BLOCK ============ */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  border-bottom:1.4pt solid var(--ink);
+  padding-bottom:3.2mm;
+  margin-bottom:3.6mm;
+}
+.header .who .name{
+  font-size:23pt;
+  font-weight:800;
+  letter-spacing:-0.01em;
+  line-height:1.1;
+}
+.header .who .role{
+  font-size:10.3pt;
+  font-weight:600;
+  color:var(--accent-deep);
+  margin-top:1.4mm;
+}
+
+.contact-block{
+  text-align:left;
+  font-size:7.5pt;
+  line-height:1.75;
+  color:var(--ink-soft);
+  padding-right:3.8mm;
+  margin-right:1mm;
+  border-right:0.8pt solid var(--paper-line);
+  white-space:nowrap;
+}
+.contact-block div{direction:ltr;}
+.contact-block .cb-strong{color:var(--ink); font-weight:700;}
+
+.intro{
+  font-size:9.3pt;
+  line-height:1.65;
+  color:var(--ink-soft);
+  max-width:100%;
+  margin-bottom:4mm;
+}
+.intro b{color:var(--ink); font-weight:700;}
+
+/* ============ FOCUS CARDS ============ */
+.focus-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:2.6mm;
+  margin-bottom:3mm;
+  padding-bottom:4mm;
+  border-bottom:0.7pt solid var(--paper-line);
+  align-items:start;
+}
+.focus-card{
+  border:0.7pt solid var(--paper-line);
+  border-top:1.8pt solid var(--accent);
+  background:rgba(255,255,255,0.4);
+  padding:2.4mm 2.8mm;
+}
+.focus-card .ft{
+  font-size:8.1pt;
+  font-weight:700;
+  margin-bottom:0.8mm;
+}
+.focus-card .fd{
+  font-size:6.9pt;
+  color:var(--ink-soft);
+  line-height:1.4;
+}
+
+/* ============ SECTION TITLES ============ */
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:2mm;
+  font-size:9.6pt;
+  font-weight:800;
+  color:var(--ink);
+  margin-bottom:2.6mm;
+}
+.section-title .tick{
+  width:3mm; height:2.6mm;
+  background:var(--accent);
+  flex:none;
+}
+.section-title .rule{
+  flex:1;
+  height:0.7pt;
+  background:var(--paper-line);
+}
+.section-title .eyebrow{
+  font-size:6.6pt;
+  font-weight:600;
+  color:var(--ink-faint);
+  letter-spacing:0.02em;
+  direction:ltr;
+}
+
+/* ---- experience ---- */
+.exp-item{
+  position:relative;
+  padding-right:5mm;
+  margin-bottom:3.1mm;
+}
+.exp-item::before{
+  content:"";
+  position:absolute;
+  right:1.4mm;
+  top:1.6mm;
+  width:2mm; height:2mm;
+  background:var(--accent);
+  border-radius:50%;
+}
+.exp-item:last-child{margin-bottom:0;}
+/* page-2 single-block items: no ball, simple indent only */
+.exp-item.exp-single::before{display:none;}
+.exp-item.exp-single{
+  border-right:none;
+  padding-right:3.5mm;
+}
+.exp-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:2mm;
+  flex-wrap:wrap;
+}
+.exp-titles{display:flex; align-items:baseline; gap:1.8mm; flex-wrap:wrap;}
+.exp-role{font-size:9.2pt; font-weight:700;}
+.exp-org{font-size:8.4pt; font-weight:600; color:var(--accent-deep);}
+.exp-date{
+  font-size:7.2pt;
+  font-weight:700;
+  color:var(--ink-faint);
+  white-space:nowrap;
+  direction:ltr;
+}
+.exp-desc{
+  font-size:8pt;
+  color:var(--ink-soft);
+  line-height:1.5;
+  margin-top:0.9mm;
+}
+.exp-projects{
+  margin-top:1.6mm;
+  display:flex;
+  flex-direction:column;
+  gap:1.1mm;
+}
+.exp-projects .pj{
+  font-size:7.6pt;
+  line-height:1.45;
+  color:var(--ink-soft);
+  padding-right:3mm;
+  position:relative;
+}
+.exp-projects .pj::before{
+  content:"›";
+  position:absolute;
+  right:0;
+  top:0;
+  color:var(--accent);
+  font-weight:800;
+}
+.exp-projects .pj b{color:var(--ink); font-weight:700;}
+
+/* ---- skills/edu 3-col block ---- */
+.three-col-block{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:5mm;
+  margin-bottom:4mm;
+}
+.three-col-block .section-title{
+  margin-bottom:2mm;
+}
+/* each skill row: name fixed width so bars align vertically within their column */
+.skill-row{
+  display:grid;
+  grid-template-columns:26mm auto;
+  align-items:center;
+  gap:2mm;
+  margin-bottom:1.8mm;
+}
+.skill-name{font-size:7.5pt; font-weight:600; color:var(--ink);}
+.skill-meter{display:flex; gap:0.7mm;}
+.skill-seg{width:2.8mm; height:1.5mm; background:var(--paper-line-soft);}
+.skill-seg.on{background:var(--accent);}
+.skill-seg.half{background:linear-gradient(to left, var(--accent) 50%, var(--paper-line-soft) 50%);}
+
+.edu-item{margin-bottom:2.4mm;}
+.edu-item:last-child{margin-bottom:0;}
+.edu-deg{font-size:7.8pt; font-weight:700; line-height:1.4;}
+.edu-org{font-size:7.1pt; color:var(--ink-soft); margin-top:0.6mm;}
+.edu-date{font-size:6.7pt; color:var(--ink-faint); margin-top:0.3mm; direction:ltr; text-align:right;}
+
+/* ============ PAGE 2 ============ */
+.p2-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  border-bottom:1.4pt solid var(--ink);
+  padding-bottom:3.2mm;
+  margin-bottom:3.6mm;
+}
+.p2-header .p2-name{font-size:16pt; font-weight:800; letter-spacing:-0.01em;}
+.p2-header .p2-sub{font-size:9pt; font-weight:600; color:var(--accent-deep); margin-top:1mm;}
+.p2-header .p2-contact{
+  text-align:left;
+  font-size:7.5pt;
+  line-height:1.75;
+  color:var(--ink-soft);
+  padding-right:3.8mm;
+  border-right:0.8pt solid var(--paper-line);
+  white-space:nowrap;
+  direction:ltr;
+}
+
+/* ---- challenges ---- */
+.challenge-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2.6mm;
+  margin-bottom:4mm;
+}
+.challenge-item{
+  border:0.7pt solid var(--paper-line);
+  border-right:2pt solid var(--accent);
+  background:rgba(255,255,255,0.4);
+  padding:3mm 3.5mm;
+}
+.ch-title{
+  font-size:8.2pt;
+  font-weight:700;
+  color:var(--ink);
+  margin-bottom:1mm;
+}
+.ch-desc{
+  font-size:7.4pt;
+  color:var(--ink-soft);
+  line-height:1.5;
+}
+
+/* ---- interest cards (p2) ---- */
+.focus-row-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2.6mm;
+  margin-bottom:3.8mm;
+}
+
+/* ---- tools row ---- */
+.tools-wrap{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1.4mm 2mm;
+  margin-bottom:3.8mm;
+}
+.tool-tag{
+  font-size:7.4pt;
+  font-weight:600;
+  color:var(--ink);
+  background:rgba(255,255,255,0.5);
+  border:0.6pt solid var(--paper-line);
+  padding:0.8mm 2mm;
+}
+
+/* ---- closing quote ---- */
+.closing-quote{
+  margin-top:auto;
+  background:var(--accent-tint);
+  border-right:2.4pt solid var(--accent);
+  padding:3.5mm 5mm;
+  font-size:8.8pt;
+  line-height:1.7;
+  color:var(--accent-deep);
+  font-weight:600;
+}
+
+@media print{
+  html,body{background:#fff;}
+  .sheet-stack{padding:0; gap:0;}
+  .page{box-shadow:none; page-break-after:always;}
+  .page:last-child{page-break-after:auto;}
+  @page{size:A4; margin:0;}
+}
+</style>
 </head>
-<body style="width:100%; height:100%; margin:0;">
-<iframe src="https://docs.google.com/gview?url=https://github.com/MansourM/resume/raw/main/Resume-Mansour.pdf&embedded=true" style="width:100%; height:100%;"
-        frameborder="0"></iframe>
+<body>
+<div class="sheet-stack">
+
+<!-- ============ PAGE 1 ============ -->
+<div class="page">
+
+  <div class="header">
+    <div class="who">
+      <div class="name">سیدمنصور میربهبهانی</div>
+      <div class="role">رهبر فنی  •  معمار نرم‌افزار  •  بنیان‌گذار توسعه‌دهندگان فردا</div>
+    </div>
+    <div class="contact-block">
+      <div class="cb-strong">گرگان، ایران</div>
+      <div>seyed.mansour@mirbehbahani.ir</div>
+      <div>github.com/MansourM · fardadev.com</div>
+      <div>0911-635-3554</div>
+    </div>
+  </div>
+
+  <div class="intro">
+    بیش از ۱۰ سال تجربه در طراحی، توسعه و رهبری محصولات نرم‌افزاری.
+    مسیر محصول را از ایده تا اجرا می‌شناسم: پرورش ایده، تیم‌سازی، معماری نرم‌افزار، طراحی پایگاه داده، زیرساخت، و مدیریت سرور در تولید.
+  </div>
+
+  <div class="focus-row">
+    <div class="focus-card">
+      <div class="ft">پرورش ایده</div>
+      <div class="fd">تحقیق و همکاری نزدیک با مشتری برای درک نیاز — از ایده خام تا محصول</div>
+    </div>
+    <div class="focus-card">
+      <div class="ft">معماری نرم‌افزار</div>
+      <div class="fd">طراحی سامانه‌های پایدار با معماری اصولی و ساختار داده منسجم</div>
+    </div>
+    <div class="focus-card">
+      <div class="ft">زیرساخت و DevOps</div>
+      <div class="fd">چرخه کامل: Docker، CI/CD، Ansible و مدیریت سرور اختصاصی خام</div>
+    </div>
+    <div class="focus-card">
+      <div class="ft">رهبری فنی</div>
+      <div class="fd">مدیریت تیم، تصمیم‌های معماری و کیفیت کد</div>
+    </div>
+  </div>
+
+  <!-- ======= SKILLS + EDUCATION — single 3-col grid ======= -->
+  <div class="three-col-block">
+
+    <!-- Col 1: Technical skills -->
+    <div>
+      <div class="section-title">
+        <div class="tick"></div>
+        مهارت‌های فنی
+      </div>
+      <div class="skill-row"><div class="skill-name">PHP / Laravel</div><div class="skill-meter"><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div></div></div>
+      <div class="skill-row"><div class="skill-name">Linux / Server Admin</div><div class="skill-meter"><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg half"></div></div></div>
+      <div class="skill-row"><div class="skill-name">Java / Android</div><div class="skill-meter"><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg"></div></div></div>
+      <div class="skill-row"><div class="skill-name">Docker / DevOps</div><div class="skill-meter"><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg"></div></div></div>
+      <div class="skill-row"><div class="skill-name">MySQL / PgSQL / SQLite</div><div class="skill-meter"><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg"></div></div></div>
+      <div class="skill-row"><div class="skill-name">Git / CI-CD</div><div class="skill-meter"><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg"></div></div></div>
+      <div class="skill-row"><div class="skill-name">AI Workflows</div><div class="skill-meter"><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg"></div></div></div>
+    </div>
+
+    <!-- Col 2: Soft skills -->
+    <div>
+      <div class="section-title">
+        <div class="tick"></div>
+        مهارت‌های نرم
+      </div>
+      <div class="skill-row"><div class="skill-name">انگلیسی</div><div class="skill-meter"><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div></div></div>
+      <div class="skill-row"><div class="skill-name">رهبری تیم</div><div class="skill-meter"><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg"></div></div></div>
+      <div class="skill-row"><div class="skill-name">مدیریت پروژه</div><div class="skill-meter"><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg on"></div><div class="skill-seg"></div></div></div>
+    </div>
+
+    <!-- Col 3: Education -->
+    <div>
+      <div class="section-title">
+        <div class="tick"></div>
+        سوابق تحصیلی
+      </div>
+      <div class="edu-item">
+        <div class="edu-deg">کارشناسی ارشد مهندسی کامپیوتر-نرم‌افزار</div>
+        <div class="edu-org">دانشگاه پیام نور (تهران شمال)</div>
+        <div class="edu-date">1397 — 1400</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-deg">کارشناسی مهندسی نرم‌افزار</div>
+        <div class="edu-org">دانشگاه خواجه‌نصیرالدین طوسی</div>
+        <div class="edu-date">1392 — 1397</div>
+      </div>
+    </div>
+
+  </div>
+  <!-- ======= END 3-col block ======= -->
+
+  <div class="section-title">
+    <div class="tick"></div>
+    گلچین سوابق حرفه‌ای
+    <div class="rule"></div>
+    <div class="eyebrow">EXPERIENCE</div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-titles">
+        <span class="exp-role">بنیان‌گذار و مدیرعامل</span>
+        <span class="exp-org">— توسعه‌دهندگان فردا (FardaDev)</span>
+      </div>
+      <div class="exp-date">1402 — اکنون</div>
+    </div>
+    <div class="exp-desc">
+      راه‌اندازی استودیو و رهبری فنی تیم توسعه در ساخت هم‌زمان چند محصول سازمانی. زیرساخت مجموعه را شخصاً از صفر تا تولید راه‌اندازی کرده‌ام.
+    </div>
+    <div class="exp-projects">
+      <div class="pj"><b>سامانه پشتیبان</b> — پلتفرم پشتیبانی مشتری چندکاناله؛ گفتگوی زنده از طریق ربات تلگرام و پنل وب با مسیریابی هوشمند تیکت و گزارش‌گیری</div>
+      <div class="pj"><b>سامانه ادمین</b> — مجموعه ابزارهای داخلی که کار روزانه تیم ادمین آندروپی را سریع‌تر و دقیق‌تر می‌کند</div>
+      <div class="pj"><b>Andro.law</b> — سامانه امضای دیجیتال قرارداد با احراز هویت، متصل به سامانه‌های ملی هویت‌سنجی</div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-titles">
+        <span class="exp-role">توسعه‌دهنده ارشد و مسئول فنی</span>
+        <span class="exp-org">— شرکت سهامی مزرعه نمونه گرگان</span>
+      </div>
+      <div class="exp-date">1400 — 1402</div>
+    </div>
+    <div class="exp-desc">
+      معرفی مهارت‌هایم در دوران خدمت — نرم‌افزارهای مدیریت فارم را از صفر طراحی و پیاده‌سازی کردم.
+    </div>
+    <div class="exp-projects">
+      <div class="pj"><b>سامانه سرشیفت</b> — ثبت و گزارش‌گیری حضور، شیفت، اضافه‌کاری و کسر کار (هنوز در حال استفاده)</div>
+      <div class="pj"><b>اپلیکیشن فارم آرین</b> — مدیریت فارم‌های گوشتی و تولیدی با داشبورد مدیریتی</div>
+      <div class="pj"><b>اپلیکیشن تخم‌مرغ</b> — ثبت و گزارش‌گیری روزانه تخم‌مرغ فارم‌های اجداد</div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-titles">
+        <span class="exp-role">توسعه‌دهنده ارشد</span>
+        <span class="exp-org">— شرکت توسعه فناوری پیشرفته شینا</span>
+      </div>
+      <div class="exp-date">1396 — 1400</div>
+    </div>
+    <div class="exp-desc">
+      طراحی و توسعه محصولات سلامت دیجیتال در یک تیم کوچک.
+    </div>
+    <div class="exp-projects">
+      <div class="pj"><b>سامانه سیپسا</b> — وبسایت خدمات پزشکی از راه دور با نوبت‌دهی، پرداخت و اعلان بلادرنگ</div>
+      <div class="pj"><b>اپلیکیشن مانکس</b> — ایستگاه‌های سلامت اندروید؛ ثبت داده‌های حیاتی و ارسال به پزشک</div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-head">
+      <div class="exp-titles">
+        <span class="exp-role">دوران آغازین</span>
+        <span class="exp-org">— وب، سئو و توسعه اندروید</span>
+      </div>
+      <div class="exp-date">1392 — 1396</div>
+    </div>
+    <div class="exp-projects">
+      <div class="pj"><b>رله فیلم</b> — سئوی تخصصی با تمرکز بر اصالت و عمر محتوا — اکثر پست‌ها به صفحه اول گوگل رسیدند</div>
+      <div class="pj"><b>اپلیکیشن دانشگاه خواجه‌نصیر</b> — طراحی گرافیکی و بصری اپلیکیشن معرفی دانشگاه</div>
+      <div class="pj"><b>بازطراحی فالوئرپلاس</b> — بازنویسی کامل سرور و اپ با ۱۰۰ هزار کاربر — عیب‌یابی DB و بهینه‌سازی امنیتی در مقیاس بالا</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="page">
+
+  <div class="p2-header">
+    <div>
+      <div class="p2-name">سیدمنصور میربهبهانی</div>
+      <div class="p2-sub">رهبر فنی  •  معمار نرم‌افزار  •  بنیان‌گذار توسعه‌دهندگان فردا</div>
+    </div>
+    <div class="p2-contact">
+      <div>seyed.mansour@mirbehbahani.ir</div>
+      <div>github.com/MansourM · fardadev.com</div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <div class="tick"></div>
+    چالش‌ها و راه‌حل‌ها
+    <div class="rule"></div>
+    <div class="eyebrow">PROBLEMS SOLVED</div>
+  </div>
+
+  <div class="challenge-grid">
+    <div class="challenge-item">
+      <div class="ch-title">نجات اپلیکیشن ۱۰۰ هزار کاربری</div>
+      <div class="ch-desc">فالوئرپلاس با کد آماتور و پر از باگ، DB با timeoutهای مکرر، و نفوذ هکرها به من ارجاع شد. در هفته اول حدود ۸۰ ساعت روی رفع مشکلات مرکزی وقت گذاشتم — اول backend را بدون قطع سرویس بازنویسی کردم، بعد اپلیکیشن را دست گرفتم و ۳ سال توسعه و نگهداری ادامه دادم.</div>
+    </div>
+    <div class="challenge-item">
+      <div class="ch-title">از ۲۰۰۰ قرارداد دستی تا تولید خودکار</div>
+      <div class="ch-desc">اندروپی بیش از ۲۰۰۰ مشتری داشت که هر کدام قرارداد با شرایط و مقادیر متفاوت نیاز داشتند — تهیه و پیگیری دستی این حجم غیرممکن بود. Andro.law را طراحی کردم: کاربر اطلاعات را وارد می‌کند، استعلام رسمی انجام می‌شود، ادمین قالب می‌سازد و با یک کلیک فایل Word/PDF با تمام مقادیر پر می‌شود — ارسال خودکار SMS و امضای دیجیتال در داشبورد.</div>
+    </div>
+    <div class="challenge-item">
+      <div class="ch-title">داشبورد مدیریت دسترسی و پردازش ایمیل</div>
+      <div class="ch-desc">تیم ادمین‌های اندروپی به ایمیل‌ها و کدهای OAuth مختلفی دسترسی داشتند، بدون هیچ نظم و ردگیری. یک داشبورد متمرکز ساختم که تمام این اطلاعات را نگه می‌دارد، با audit trail کامل. ایمیل‌ها از سرویس ایمیل به دیتابیس داشبورد هدایت می‌شوند و در مسیر، یک لایه پردازش مبتنی بر regex منبع و نوع هر ایمیل را تشخیص می‌دهد و کدهای احراز را استخراج می‌کند. سطح دسترسی هر ادمین مشخص می‌کند ایمیل کامل را ببیند یا فقط کد را.</div>
+    </div>
+    <div class="challenge-item">
+      <div class="ch-title">اتوماسیون برنامه‌ریزی شیفت نگهبانان</div>
+      <div class="ch-desc">چندین ایستگاه و زیرایستگاه با ده‌ها نگهبان — ثبت اطلاعات، حقوق، مرخصی و برنامه‌ریزی روزانه همه دستی انجام می‌شد و تهیه لوحه شیفت با توجه به پویایی زیاد، کاری بسیار دشوار بود. سامانه سرشیفت را ساختم: نگهبان تعریف می‌کنید، نوع شیفت (با سرشیفت‌های مختلف) وارد می‌شود، و سیستم خودکار برنامه هفتگی را می‌چیند. لوحه نهایی با یک کلیک آماده چاپ است. ادمین‌ها همه چیز را از طریق وب می‌بینند و دقت برنامه‌ریزی به شدت بالا رفت.</div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <div class="tick"></div>
+    زیرساخت در عمل
+    <div class="rule"></div>
+    <div class="eyebrow">INFRASTRUCTURE</div>
+  </div>
+  <div class="exp-item exp-single" style="margin-bottom:3.8mm;">
+    <div class="exp-projects">
+      <div class="pj">زیرساخت اختصاصی AndroPay را شخصاً از صفر روی <b>Hetzner bare-metal</b> با <b>Proxmox</b> راه‌اندازی کرده‌ام — <b>۷۰+ ماشین مجازی</b>، <b>۵۱۲ گیگ RAM</b>، <b>۸ ترابایت SSD</b>، <b>۷۰+ IP اختصاصی</b>، با مهاجرت از OVH.</div>
+      <div class="pj">نصب Proxmox روی سرور خام، ساخت قالب‌های Ubuntu و Windows با Cloud-Init، سخت‌سازی امنیتی، پیکربندی فایروال و شبکه — کل زنجیره زیرساخت را از خرید سرور تا تولید نهایی مدیریت می‌کنم.</div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <div class="tick"></div>
+    اپن‌سورس
+    <div class="rule"></div>
+    <div class="eyebrow">OPEN SOURCE</div>
+  </div>
+  <div class="exp-item exp-single" style="margin-bottom:3.8mm;">
+    <div class="exp-projects">
+      <div class="pj"><b>ez-docker-for-laravel</b> — جایگزین رایگان برای سرویس‌های پولی مثل Laravel Forge؛ مدیریت کامل Nginx و MySQL، CI/CD داخلی، پشتیبانی از محیط‌های dev/staging/prod با Dockerfile اختصاصی، و CLI که با گرفتن .env اکثر تنظیمات را خودکار انجام می‌دهد.</div>
+      <div class="pj"><b>telegram-objects-php</b> — کتابخانه typed و مستقل از فریم‌ورک برای Telegram Bot API. برخلاف کتابخانه‌های رایج که پر از magic method و آرایه‌های بدون ساختار هستند، این پروژه با DTOهای typed و validation کامل، static analysis و intellisense در IDE را ممکن می‌کند.</div>
+      <div class="pj"><b>saman-banking-api-php</b> — پکیج Laravel با معماری DTO و API قوی برای درگاه بانک سامان؛ مثل telegram-objects با تأکید بر type-safety و حذف magic طراحی شده.</div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <div class="tick"></div>
+    علایق فنی و مسیر یادگیری
+    <div class="rule"></div>
+    <div class="eyebrow">INTERESTS &amp; LEARNING</div>
+  </div>
+  <div class="focus-row-3" style="margin-bottom:3.8mm; grid-template-columns:repeat(2,1fr);">
+    <div class="focus-card">
+      <div class="ft">یکپارچه‌سازی AI در محصول</div>
+      <div class="fd">معماری multi-agent با Provider/Plugin برای ادغام قابل‌اتکای AI در محصولات تجاری</div>
+    </div>
+    <div class="focus-card">
+      <div class="ft">آموزش و fine-tune مدل</div>
+      <div class="fd">یادگیری fine-tune مدل‌های زبانی کوچک به‌صورت محلی و طراحی گردش‌کارهای AI</div>
+    </div>
+    <div class="focus-card">
+      <div class="ft">زیرساخت و سخت‌افزار</div>
+      <div class="fd">طراحی فیزیکی و نگهداری سرورهای فیزیکی با قابللیت تشخیص تخصصی قطعه معیوب</div>
+    </div>
+    <div class="focus-card">
+      <div class="ft">IaC و اتوماسیون</div>
+      <div class="fd">مهاجرت به اتوماسیون کامل زیرساخت — provisioning، پیکربندی و استقرار خودکار</div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <div class="tick"></div>
+    ابزارها و زبان‌های دیگر
+    <div class="rule"></div>
+    <div class="eyebrow">TOOLS</div>
+  </div>
+  <div class="tools-wrap" style="margin-bottom:3.8mm;">
+    <span class="tool-tag">Bash / Shell</span>
+    <span class="tool-tag">TypeScript</span>
+    <span class="tool-tag">React</span>
+    <span class="tool-tag">Python</span>
+    <span class="tool-tag">WebSockets</span>
+    <span class="tool-tag">React Native</span>
+    <span class="tool-tag">Next.js</span>
+    <span class="tool-tag">Tailwind</span>
+    <span class="tool-tag">AlpineJS</span>
+    <span class="tool-tag">Bootstrap</span>
+    <span class="tool-tag">Redis</span>
+    <span class="tool-tag">PostgreSQL</span>
+    <span class="tool-tag">SQLite</span>
+    <span class="tool-tag">WordPress</span>
+    <span class="tool-tag">Ansible</span>
+    <span class="tool-tag">Cloudflare Workers</span>
+    <span class="tool-tag">Playwright</span>
+    <span class="tool-tag">Proxmox</span>
+  </div>
+
+  <div class="closing-quote">
+    معمولاً در مصاحبه می‌پرسم: مهم‌ترین زبان برنامه‌نویسی چیست؟<br>
+    به نظر من جواب درست زبان انگلیسی است، چون امروزه وسیلهٔ کسب دانش است. بحث بر سر زبان‌های کد مثل بحث بر سر برتری آچار و چکش است. هر کدام نقاط قوت و ضعف خود را دارند و بخشی از جعبه‌ابزار یک مهندس‌اند. مهم‌ترین ابزار یک مهندس، توانایی تحلیل و حل مسئله و اشتیاق به یادگیری است. من همیشه با مسئله و نیاز مشتری شروع کرده‌ام، نه با فناوری. حالا که هوش مصنوعی این مرزها را هم کمرنگ می‌کند، این اصل پررنگ‌تر از همیشه است.
+  </div>
+</div>
+
+</div>
 </body>
 </html>
