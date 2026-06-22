@@ -137,7 +137,7 @@ body{
   margin-bottom:3mm;
   padding-bottom:4mm;
   border-bottom:0.7pt solid var(--paper-line);
-  align-items:start;
+  align-items:stretch;
 }
 .focus-card{
   border:0.7pt solid var(--paper-line);
@@ -447,9 +447,9 @@ a:hover{text-decoration:underline;}
       A software agency from idea to execution&mdash;technical leadership of a development team building multiple enterprise products simultaneously. Personally set up the entire infrastructure from scratch to production.
     </div>
     <div class="exp-projects">
-      <div class="pj"><b>Admin Dashboard</b> &mdash; The admin team dealt with hundreds of accounts, emails, and two-step verification codes with zero structure&mdash;no one knew who had access to what, when passwords changed, who last accessed which account, or who had access on a given day. I built a centralized dashboard that tracks all of this with full auditability. Incoming emails are routed from the mail service into the database and automatically classified via regex into categories (notification, verification code, transaction, etc.). Every section has role-based, per-user access control, and all activity is fully auditable.</div>
+      <div class="pj"><b>Admin Dashboard</b> &mdash; The admin team dealt with hundreds of accounts, emails, and two-step verification codes with zero structure&mdash;no one knew who had access to what, when passwords changed, who last accessed which account, or who had access on a given day. I built a centralized dashboard that tracks all of this with full auditability. Incoming emails are routed into the database and automatically classified via regex into categories (notification, verification code, transaction, etc.). Every section has role-based, per-user access control, and all activity is auditable.</div>
       <div class="pj"><b>Andro.law</b> &mdash; Over 2,000 clients each needed contracts with varying terms and values&mdash;manual drafting and tracking at this scale was impossible. I designed a system where the client enters information, an official inquiry runs, an admin builds a template, and with a single click a Word/PDF document is generated with all values filled in&mdash;along with automated SMS delivery and digital signature in the dashboard.</div>
-      <div class="pj"><b>Support Platform</b> &mdash; Admins were providing support directly through personal or work Telegram accounts&mdash;there was zero visibility into who said what to which client, and a single admin had to juggle Telegram, tickets, and several other places simultaneously. I built a platform that centralizes all channels into a single interface: live chat via a Telegram bot and a web panel with intelligent ticket routing. Admins now have one interface to manage, every message back and forth is visible and auditable, and since everything is logged, admin performance reporting is now available.</div>
+      <div class="pj"><b>Support Platform</b> &mdash; Admins were providing support directly through personal or work Telegram accounts&mdash;there was zero visibility into who said what to which client, and a single admin had to juggle Telegram, tickets, and several other places simultaneously. I built a platform that centralizes all channels into a single interface: live chat via a Telegram bot and a web panel with intelligent ticket routing. Admins now have one interface to manage, every exchanged message is visible and auditable, and since everything is logged, admin performance reporting is now available.</div>
       <div class="pj"><b>Dedicated Infrastructure</b> &mdash; For greater control and lower cost, I built the entire infrastructure from scratch on Hetzner bare-metal with Proxmox: installing Proxmox on raw servers, building Ubuntu and Windows templates with Cloud-Init, security hardening, firewall and network configuration. Today it serves 70+ VMs with 512GB RAM, 8TB storage, and 70+ dedicated IPs.</div>
     </div>
   </div>
